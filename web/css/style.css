@@ -1,0 +1,578 @@
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: url('../fonts/PTSans-NarrowBold.woff2') format('woff2'),
+        url('../fonts/PTSans-NarrowBold.woff') format('woff'),
+        url('../fonts/PTSans-NarrowBold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: url('../fonts/PTSans-Narrow.woff2') format('woff2'),
+        url('../fonts/PTSans-Narrow.woff') format('woff'),
+        url('../fonts/PTSans-Narrow.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: url('../fonts/PTSans-Narrow_1.woff2') format('woff2'),
+        url('../fonts/PTSans-Narrow_1.woff') format('woff'),
+        url('../fonts/PTSans-Narrow_1.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'PT Sans Narrow';
+    src: url('../fonts/PTSans-NarrowBold_1.woff2') format('woff2'),
+        url('../fonts/PTSans-NarrowBold_1.woff') format('woff'),
+        url('../fonts/PTSans-NarrowBold_1.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+@import url('../css/normalize.css');
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+a, a:visited, a:link{
+    text-decoration: none;
+    color:inherit;
+    cursor: pointer;
+}
+a:hover{
+    color: #ddba34;
+}
+
+.wrapper{
+    background: #000000 url('../img/bg.jpg') no-repeat fixed center;
+    font: 14px/1 'PT Sans Narrow','Arial', sans-serif;
+    font-weight: bold;
+    color: #ffffff;
+}
+
+/*HEADER*/
+.header__nav{
+    display: flex;
+    justify-content: space-between;
+    height: 72px;
+    background-color: #000000;
+    text-transform: uppercase;
+
+}
+.header__nav_menu{
+    list-style: none;
+
+}
+.header__nav_menu li{
+    display: inline-block;
+    margin-left: 40px;
+    margin-top: 30px;
+}
+.header__nav_menu li:first-child{
+    margin-left: 30px;
+}
+.header__nav_menu li a{
+    position: relative;
+    
+}
+
+.header__nav_menu li a:before{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: #ffffff;
+    top: 100%;
+    left: 0;
+    transition: 0.5s;
+ 
+
+}
+.header__nav_menu li a:after{
+    content: '';
+    width: 0;
+    height: 3px;
+    position: absolute;
+    background-color: #ddba34;
+    top: 100%;
+    right: 0;
+    transition: 0.5s;
+   
+}
+.header__nav_menu li:hover a:before{
+    width: 50%;
+    transform: translateX(100%);
+}
+.header__nav_menu li:hover a:after{
+    width: 50%;
+    transform: translateX(-100%);
+}
+.login{
+    display: inline-block;
+    margin-top: 30px;
+    margin-right: 30px;
+}
+
+
+.login:before{
+    content: '';
+    background: url('../img/login_logo.png') center no-repeat;
+    display:inline-block;
+    height: 14px;
+    width: 20px;
+    vertical-align: center;
+    position: absolute;
+    right: 60px;
+
+
+}
+
+.logo{
+    display: flex;
+    justify-content: center;
+    margin: 60px 0 82px;
+}
+
+.about{
+    display: flex;
+    justify-content: space-between;
+}
+
+h2{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+.about h2:after{
+    content: '';
+    width:20px;
+    height:20px;
+    display: block;
+    background-color: #ffffff;
+    transform: rotate(45deg);
+    margin: 15px auto 29px;
+}
+
+.about>div{
+    text-align: center;
+    width: 33%;
+    line-height: 24pt;
+    margin: 0 30px;
+}
+/*CONTENT*/
+.index__content{
+    background-color: #f7f4f1;
+    display: flex;
+    justify-content: space-around;
+    color: #000000;
+    width: 80%;
+    margin: 85px auto 35px;
+}
+
+.index__content_news{
+    margin:55px 100px 50px 80px;
+
+}
+.index__content_news h2{
+    margin-bottom: 30px;
+}
+.index__content_news p{
+    line-height: 20pt;
+    width: 355px;
+}
+.index__content_news .news__date{
+    margin-bottom: 25px;
+}
+
+.btn{
+    width: 140px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+    text-transform: uppercase;
+    background-color: #000000;
+    color: #ffffff;
+}
+.btn:hover{
+    box-shadow: 5px 3px 0px 0 #ddba34;
+    color: #ddba34;
+    transition: box-shadow 0.25s ease-in-out;
+}
+.index__content_gallery{
+    margin:55px 80px 50px 0px;
+    text-align: center;
+}
+.index__content:before{
+    content: '';
+    position: absolute;
+    display: block;
+    background: url('../img/vertical_line.png') center no-repeat;
+    height: 260px;
+    width: 6px;
+    margin-top: 80px;
+
+}
+
+.index__content_gallery h2{
+    margin-bottom: 35px;
+    text-align: left;
+}
+
+.btn_container{
+    margin-top: 45px;
+    display: flex;
+    justify-content: space-between;
+}
+.btn_container .btn:last-child{
+    margin-left: 16px;
+}
+/*aline buttons!*/
+
+/*CONTACTS*/
+.contacts{
+    background-color: #f7f4f1;
+    display: flex;
+    justify-content: space-around;
+    color: #000000;
+    width: 90%;
+    margin: 0 auto 67px;
+}
+.contacts:before{
+    content: '';
+    position: absolute;
+    display: block;
+    background: url('../img/vertical_line.png') center no-repeat;
+    height: 260px;
+    width: 6px;
+    margin-top: 80px;
+
+}
+
+.contacts__info{
+    margin-left: 80px;
+}
+.contacts__info h2{
+    margin: 57px 0 36px;
+}
+.contacts__info_address span{
+    line-height: 24pt;
+    display: block;
+}
+
+.contacts__info_shifts{
+    margin: 35px 0 30px;
+}
+.contacts__info_shifts span{
+    display: block;
+    line-height: 24pt;
+}
+.contacts .btn{
+    display: inline-block;
+    margin-bottom: 60px;
+    margin-right: 20px;
+}
+
+.contacts__form{
+    margin: 56px 80px 50px 100px;
+}
+
+.contacts__form p{
+    margin: 30px 0 36px;
+}
+
+fieldset {
+    border: 0;
+    display: flex;
+    justify-content: space-between;
+}
+.contacts__form p{
+    max-width: 290px;
+    line-height: 1.714;
+    
+
+}
+.contacts__form form fieldset input{
+    width: 138px;
+    height: 47px;
+    text-transform: uppercase;
+    border: 2px solid #000000;
+    margin: 0 20px 20px 0;
+    padding-left: 15px;
+    
+}
+
+::placeholder{
+    font-weight: bold;
+    color: #000000;
+    opacity: 1;
+
+}
+.contacts__form form .btn{
+    border: 0;
+    width: 300px;
+    height: 43px;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 1.714;
+}
+
+.footer{
+    background: url('../img/footer_bg.jpg') repeat;
+    height: 192px;
+    display: flex;
+    justify-content: center;
+    padding-top: 65px;
+    text-transform: uppercase;
+}
+
+.footer__info span{
+    display: block;
+    font-size: 14px;
+    line-height: 1.714;
+}
+
+.footer__socials{
+    margin-left: 90px;
+}
+.socials{
+    text-align: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+.socials a{
+    display: block;
+    width: 25px;
+    height: 16px;
+    background: url('../img/socials.png')  no-repeat;
+    background-position: -3px -0px;
+    margin-top: 30px;
+    position: relative;
+}
+
+
+.socials a:first-child:hover {
+    width: 25px;
+    height: 16px;
+    background-position: -3px -19px;
+}
+.socials a:nth-of-type(2){
+    background-position: -3px -86px;
+    width: 12px;
+    height: 22px;
+}
+.socials a:nth-of-type(2):hover{
+    background-position: -3px -111px;
+    width: 12px;
+    height: 22px;
+}
+.socials a:nth-of-type(3){
+    background-position: -3px -38px;
+    width: 21px;
+    height: 21px;
+}
+.socials a:nth-of-type(3):hover{
+   background-position: -3px -62px;
+   width: 21px;
+   height: 21px; 
+}
+.footer__developed{
+    margin-left: 260px;
+    text-align: center;
+}
+.footer__developed div{
+    width: 140px;
+    height: 43px;
+    background-color: #000000;
+    margin-top: 22px;
+    text-align: center;
+    line-height: 43px;
+  
+} 
+
+/*Modal (background)*/
+.login__modal{
+    display: none; /*Hidden by default*/
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto; /* enable scroll if needed*/
+    background-color: rgba(0,0,0,0.4);
+    padding-top: 60px;
+    font: 14px/1 'PT Sans Narrow','Arial', sans-serif;
+    font-weight: bold;
+}
+
+/*Modal content/box*/
+.login__modal_content{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #fbf8f5;
+    margin: 120px auto;
+    width: 50%;
+    height: 385px;
+    padding: 55px 80px;
+    text-transform: uppercase;
+}
+.login__modal_content h2{
+    margin-bottom: 33px;
+    font-size: 30px;
+}
+/*position of the Close btn*/
+.close{
+    position: absolute;
+    right: -40px;
+    top: 0;
+    color: #d0d0d0;
+    font-size: 50px;
+    font-weight: bold;
+
+}
+.close:hover{
+    transform: rotate(180deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+    color: #ddba34;
+}
+.login__modal_content label{
+    margin-bottom: 15px;
+
+}
+
+.login__modal_content input[type=text], .login__modal_content [type=password]{
+    border: 2px solid #000000;
+    width: 100%;
+    height: 47px;
+    margin-bottom: 9px;
+    text-indent: 15px;
+    text-transform: uppercase;
+    padding-right: 10%;
+}
+.login__modal_content input[type=text]{
+    background: url(../img/user_logo.png) no-repeat;
+    background-position: 96% 45%;
+}
+.login__modal_content input[type=password]{
+    background: url(../img/password_logo.png) no-repeat;
+    background-position: 96% 45%;
+}
+.login__modal_content div{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+/*CHECKBOX*/
+.checkbox_container{
+    position: relative;
+    cursor: pointer;
+    user-select: none;
+    text-indent: 30px;
+    vertical-align: middle;
+}
+/*hide default checkbox*/
+input[type=checkbox]{
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+/*create a custom one*/
+.checkmark{
+    position: absolute;
+    top: -4px;
+    left: 0;
+    height: 20px;
+    width: 20px;
+    border: 2px solid #000000;
+    background-color: #f9f6f3;
+}
+/*HOVER and checked*/
+.checkbox_container:hover input ~ .checkmark{
+    background-color: #ccc;
+}
+/*.checkbox_container input:checked ~ .checkmark{
+    background-color: #ddba34;
+}*/
+/*checkmark indicator/ hidden when not checked*/
+.checkmark:after, .checkmark:before{
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+/* Show the checkmark when checked */
+.checkbox_container input:checked ~ .checkmark:after, .checkbox_container input:checked ~ .checkmark:before{
+    display: block;
+}
+/*checkmark style*/
+.checkbox_container .checkmark:after, .checkbox_container .checkmark:before{
+    content: '';
+    height: 15px;
+    width: 2px;
+    left: 7px;
+    top: 0.5px;
+    position: absolute;
+    background-color: #000000;
+}
+.checkbox_container .checkmark:after{
+    transform: rotate(45deg);
+}
+.checkbox_container .checkmark:before{
+    transform: rotate(-45deg);
+}
+.login__modal_content .btn {
+    width: 100%;
+    font-size: 14px;
+    font-weight: bold;
+    border: 0;
+    line-height: 1.7;
+}
+.psw a{
+    text-decoration: underline;
+}
+
+/*add zoom animation*/
+
+.animate{
+    animation: animatezoom 0.6s;
+}
+@keyframes animatezoom{
+    from{
+        transform: scale(0);
+    }
+    to{
+        transform: scale(1);
+    }
+}
+/*map*/
+.map_container{
+    height: 100%;
+    width: 100%;
+    position: fixed;
+    left: 0;
+    top: 0;
+    background-color: rgba(0,0,0,0.4);
+    display: none;
+    color: #d0d0d0;
+    font-size: 50px;
+    font-weight: bold;
+}
+.map_content{
+    width: 60%;
+    height: 673px;
+    box-shadow: 0 0 5px 5px #000000;
+    position: relative;
+    z-index: 2;
+    background: url(../img/map.jpg) #ffffff center no-repeat;
+    overflow: auto;
+    margin: 120px auto;
+}
