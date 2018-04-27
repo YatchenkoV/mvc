@@ -1,13 +1,15 @@
 <?php
 
-class Price
+require_once ('../app/core/Controller.php');
+
+class Price extends Controller
 {
 	public function index()
 	{
-		echo "This is Price controller , index action";
+		
 	}
 	public function map()
 	{
-		echo "This is Price controller, map action";
+		
 	}
 }

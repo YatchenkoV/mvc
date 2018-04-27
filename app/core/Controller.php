@@ -1,7 +1,8 @@
 <?php
 // namespace Core;
 
-require '../app/core/view.php';
+require_once '../app/core/view.php';
+require_once '../app/config.php';
 // use Core\View;
 
 
@@ -9,11 +10,22 @@ abstract class Controller
 {
 
 
-	 public function render($template, $layout = null)
-    {
-        $view = new View();
-        return $view->render($template, $layout);
-    }
+	 public $route = [];
+     public $view;
+     public $layout;
+
+     public function __construct($route)
+     {
+        $this->route = $route;
+        $this->view = $route['action'];
+        include_once ROOT_DIR . "/src/views/{$route['controller']}/{$this->view}.php";
+     }
+
+     public function getView()
+     {
+        $viewObject = new View($this->route, $this->view, $this->layout);
+        $viewObject->render();
+     }
 
 
 

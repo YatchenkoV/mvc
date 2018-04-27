@@ -1,11 +1,13 @@
 <?php
 
+require_once ('../app/core/Controller.php');
 
-Class Main 
+Class Main extends Controller
 {
+	
 	public function index()
 	{
-		echo "This is Main controller, index action";
+		
 	}
 	
 

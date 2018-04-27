@@ -51,11 +51,12 @@ Class Router
 			$controller = $this->route['controller'];
 			if (class_exists($controller)) 
 			{
-				$controllerObject = new $controller;
+				$controllerObject = new $controller($this->route);
 				$action = $this->route['action'];
 				if (method_exists($controllerObject, $action))
 				{
 					$controllerObject->$action();
+					$controllerObject->getView();
 				}
 				else
 				{

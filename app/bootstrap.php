@@ -1,22 +1,21 @@
  <?php  
-require '../app/config.php';
+require_once '../app/config.php';
 
 $query = rtrim($_SERVER['REQUEST_URI'], '/');
 
-require '../app/routing/Router.php';
-require '../app/libs/functions.php';
+require_once '../app/routing/Router.php';
+require_once '../app/libs/functions.php';
 
 
 
 $router = new Router($query);
-require '../app/routes.php';
-require '../app/core/Controller.php';
+require_once '../app/routes.php';
+require_once '../app/core/Controller.php';
 require_once '../app/core/view.php';
-require '../src/Controllers/Main.php';
-require '../src/Controllers/Price.php';
+require_once '../src/Controllers/Main.php';
+require_once '../src/Controllers/Price.php';
 
-$view = new View();
-debag($router->getRoutes());
-echo "<br>";
+
+
 $router->dispatch($query);
 
