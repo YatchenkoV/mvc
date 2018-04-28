@@ -14,6 +14,7 @@ require_once '../app/core/Controller.php';
 require_once '../app/core/view.php';
 require_once '../src/Controllers/Main.php';
 require_once '../src/Controllers/Price.php';
+require_once '../src/Controllers/Map.php';
 
 
 

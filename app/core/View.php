@@ -7,14 +7,14 @@ class View
 {
     public $route = [];
     public $view;
-    public $layout;
+    public $layout = ROOT_DIR . "/src/views/layout/indexhtmlacademy.php";
 
     
-	public function __construct($route, $view, $layout)
+	public function __construct($route, $view)
 	{
         $this->route = $route;
         $this->view = $route['action'];
-        $this->layout = $layout ?: LAYOUT;
+        //$this->layout = $layout;
 	}
 
 
@@ -36,7 +36,8 @@ class View
         }
         $content = ob_get_clean();
 
-        $file_layout = ROOT_DIR . "/src/views/{$this->layout}.php";
+
+        $file_layout = ROOT_DIR . "/src/views/layout/indexhtmlacademy.php";
         if (is_file($file_layout)) 
         {
             require_once $file_layout;
@@ -44,7 +45,7 @@ class View
         }
         else
         {
-            echo "<p>Не найден <b>$file_layout</b>.</p>";
+            echo "<p>Не найден шаблон <b>$file_layout</b>.</p>";
         }
     }
 

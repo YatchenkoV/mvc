@@ -1,6 +1,5 @@
 <?php 
 
-// namespace Routing;
 
 Class Router
 {
