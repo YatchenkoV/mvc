@@ -1,10 +1,10 @@
-<base href="/">
 <!DOCTYPE html>
 <html lang="ru">
 <head>
 	<meta charset="utf-8">
-	<link rel="stylesheet" type="text/css" href="../web/css/normalize.css" >
-	<link rel="stylesheet" type="text/css" href="../web/css/stylehtmlacademy.css">
+	<link rel="stylesheet" type="text/css" href="/css/normalize.css" >
+	<link rel="stylesheet" type="text/css" href="/css/stylehtmlacademy.css">
+	
 	<title>BORODINSKI</title>
 </head>
 <body>
